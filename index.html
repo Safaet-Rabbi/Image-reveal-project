@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Blur Image Reveal Part | Webdevtrick.com</title>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<link href="style.css" rel="stylesheet" >
+</head>
+<body>
+	<div class="pic">
+    <svg class="blur" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%">
+        <image filter="url(#filter2)" xlink:href="https://images.pexels.com/photos/249798/pexels-photo-249798.png" width="100%" height="100%"></image>
+        <filter id="filter2">
+            <fegaussianblur stdDeviation="5" />
+        </filter>
+        <mask id="mask1">
+            <circle cx="-50%" cy="-50%" r="80" fill="white" filter="url(#filter2)" />
+        </mask>
+        <image xlink:href="https://images.pexels.com/photos/249798/pexels-photo-249798.png" width="100%" height="100%" mask="url(#mask1)"></image>
+    </svg>
+</div>
+	<script src="script.js" ></script>
+</body>
+</html>
